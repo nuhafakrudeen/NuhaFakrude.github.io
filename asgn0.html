@@ -1,0 +1,67 @@
+//student name: Nuha Fakrudeen
+//student email: nfakrude@ucsc.edu
+//notes to grader: n/a
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Draw a red vector (canvas version)</title>
+    </head>
+
+    <body onload="main()">
+        <canvas id="example" width="400" height="400">
+        Please use a browser that supprts "canvas"
+        </canvas>
+
+        <!-- User input interface -->
+        <div>
+            <label for="x-coordinate">v1: x </label>
+            <input type="number" id="x-coordinate" placeholder=""/>
+            <label for="y-coordinate">y</label>
+            <input type="number" id="y-coordinate" placeholder=""/>
+            <br />
+            <label for="x-coordinate2">v2: x </label>
+            <input type="number" id="x-coordinate2" placeholder=""/>
+            <label for="y-coordinate2">y</label>
+            <input type="number" id="y-coordinate2" placeholder=""/>
+            <br />
+            <button id="draw-button">Draw</button>
+        </div>
+        
+        <!-- Operation Interface -->   
+        <div>
+            <label for="operation">Operation: </label>
+            <select id="operation">
+                <option value="add">Add</option>
+                <option value="sub">Subtract</option>
+                <option value="div">Divide</option>
+                <option value="mul">Multiply</option>
+                <option value="mag">Magnitude</option>
+                <option value="norm">Normalize</option>
+                <option value="angleBetween">Angle Between</option>
+                <option value="area">Area</option>
+            </select>
+            
+            <label for="scalar">Scalar: </label>
+            <input type="number" id="scalar" placeholder="" />
+            <br />
+
+            <button id="operation-button">Draw</button>
+        </div>
+        
+        <!-- Load Script -->
+        <script src="asg0.js"></script>
+
+        <!-- Load libraries -->
+        <script src="lib/cuon-matrix-cse160.js"></script>
+
+        <!-- Student Info -->
+        <div id="info">
+            <h3>Student Info</h3>
+            <p><strong>Name:</strong> Nuha Fakrudeen</p>
+            <p><strong>Email:</strong> nfakrude@ucsc.edu</p>
+            <p><strong>Notes to grader:</strong> n/a</p>
+        </div>
+    </body>
+</html>

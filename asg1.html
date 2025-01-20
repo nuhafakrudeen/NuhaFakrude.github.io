@@ -1,0 +1,109 @@
+<!--student name: Nuha Fakrudeen-->
+<!--student email: nfakrude@ucsc.edu-->
+<!--notes to grader: awesomeness changes: added background color slider, 
+    added new shape (heart), made my layout look nice, 
+    added an undo button-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WebGL Paint Program</title>
+    <style>
+        body {
+          text-align: center;
+          background-color: 'white';
+          color: 'black';
+        }
+  
+        canvas {
+          background-color: 'black';
+          margin: 20px auto;
+          display: block;
+        }
+  
+        #shape-color,
+        #shape-size {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  
+        input[type="range"] {
+          margin: 0 10px;
+          width: 150px;
+        }
+  
+      </style>
+  </head>
+  <body onload="main()">
+    <canvas id="webgl" width="400" height="400">Please use a browser that supports "canvas"</canvas>
+
+    <div id="controls">
+      <!-- Clear Canvas Button -->
+      <div id="clear-button">
+        <button id="clearButton">Clear Canvas</button>
+      </div>
+
+      <!-- Drawing Mode Buttons -->
+      <div id="drawing-mode">
+        <p>Drawing Mode:</p>
+        <button id="pointButton">Squares</button>
+        <button id="triButton">Triangles</button>
+        <button id="circleButton">Circles</button>
+        <button id="heartButton">Heart</button>
+        <button id="displayPaintingButton">Display Painting</button>
+        <button id="undoButton">Undo</button>
+      </div>
+
+      <!-- Shape Color Sliders -->
+      <div id="shape-color">
+        <p>Shape Color:</p>
+        <label for="redSlide">Red</label>
+        <input type="range" id="redSlide" min="0" max="100" value="100" />
+        <label for="greenSlide">Green</label>
+        <input type="range" id="greenSlide" min="0" max="100" value="100" />
+        <label for="blueSlide">Blue</label>
+        <input type="range" id="blueSlide" min="0" max="100" value="100" />
+      </div>
+
+      <!-- Shape Size and Segments -->
+      <div id="shape-size">
+        <label for="sizeSlide">Shape Size:</label>
+        <input type="range" id="sizeSlide" min="5" max="40" value="10" />
+        <label for="segmentsSlide">(Circles) Segment Count:</label>
+        <input type="range" id="segmentsSlide" min="5" max="40" value="10" />
+      </div>
+        
+      <!-- Background Color -->        
+      <p>Background Color: 
+        <input type="range" id="bgRed" min="0" max="255" value="0">
+        <input type="range" id="bgGreen" min="0" max="255" value="0">
+        <input type="range" id="bgBlue" min="0" max="255" value="0">
+      </p>
+
+    <h2>Reference Image</h2>
+        <img src="reference_img.jpeg" width="400" height="400">
+
+    
+    <div id="info">
+        <h3>Student Info</h3>
+        <p><strong>Name:</strong> Nuha Fakrudeen</p>
+        <p><strong>Email:</strong> nfakrude@ucsc.edu</p>
+        <p><strong>Notes to grader:</strong> awesomeness changes: added background color slider, 
+            added new shape (heart), made my layout look nice, 
+            added an undo button</p>
+    </div>
+
+    </div>
+
+    <script src="lib/webgl-utils.js"></script>
+    <script src="lib/webgl-debug.js"></script>
+    <script src="lib/cuon-utils.js"></script>
+    <script src="Point.js"></script>
+    <script src="Triangle.js"></script>
+    <script src="Circle.js"></script>
+    <script src="Butterfly.js"></script>
+    <script src="Heart.js"></script>
+    <script src="asg1.js"></script>
+  </body>
+</html>
